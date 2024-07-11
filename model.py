@@ -240,7 +240,7 @@ def evaluate(encoder, decoder, input_lang, output_lang, pairs, n=10):
         pair = random.choice(pairs)
         print('>', pair[0])
         print('=', pair[1])
-        output_words, _ = decode(encoder, decoder, pair[0], input_lang, output_lang)
+        output_words = decode(encoder, decoder, pair[0], input_lang, output_lang)
         output_sentence = ' '.join(output_words)
         print('<', output_sentence)
         print('')
