@@ -3,7 +3,7 @@ Sequence-to-Sequence (Seq2Seq) attention model for Natural Language Processing (
 - Attention mechanism resulted in noticably better translations (comparison not shown but tested).
 - Slightly better translations observed with than without pre-trained word embeddings (see comparison below).
 
-Three implementations of word embeddings were compared. First was without any pre-trained embeddings, meaning all weights in the encoder and decoder embedding layers were randomly initialised. Second was with frozen pre-trained weights. Third was with non-frozen pre-trained weights (i.e. used only for initialisation). Of note, less than 1% of the corpus (0.65% for French, 0.15% for English) had to be initialised randomly because those words were not found in the FastText embeddings.
+Three implementations of word embeddings were compared. First was without any pre-trained embeddings, meaning all weights in the encoder and decoder embedding layers were randomly initialised. Second was with frozen pre-trained weights. Third was with non-frozen pre-trained weights (i.e. used only for initialisation). Of note, less than 1% of the corpus (0.65% for French, 0.15% for English) had to be initialised randomly because those words were not found in the FastText embeddings. Also, the emebdding dimensions were reduced to 200 from the default 300 to save on compute time.
 
 ![image](https://github.com/user-attachments/assets/8a50f579-f144-43c2-a3e0-963b29a4f5b1)
 
