@@ -10,10 +10,6 @@ device = (
     else 'cpu'
 )
 
-SOS_TOKEN = 0
-EOS_TOKEN = 1
-MAX_LENGTH = 20
-
 input_lang, output_lang, pairs = getData('eng-fra', reverse=True)
 train_dataloader = getDataLoader(64, input_lang, output_lang, pairs)
 X, y = next(iter(train_dataloader))
